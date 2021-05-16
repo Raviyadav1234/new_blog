@@ -47,8 +47,7 @@
                               die();
                             }else{
                               $username = mysqli_real_escape_string($conn, $_POST['username']);
-                              //$password = md5($_POST['password']);
-                              $password = $_POST['password'];
+                              $password = md5($_POST['password']);
 
                               $sql = "SELECT user_id, username, role FROM user WHERE username = '{$username}' AND password= '{$password}'";
 
